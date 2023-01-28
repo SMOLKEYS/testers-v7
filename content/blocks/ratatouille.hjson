@@ -1,0 +1,123 @@
+type: ItemTurret
+name: Transient
+description: A massive Railgun which fires a dense uranium round at ludicrous speeds towards enermies, causing fatal damage.
+health: 5000
+size: 5
+rotateSpeed: 2.75
+reload: 120
+range: 650
+recoil: 1.5
+ammoPerShot: 10
+maxAmmo: 15
+inaccuracy: 1
+minWarmup: 10
+warmupMaintainTime: 60
+targetUnderBlocks: false
+shootEffect: shootBig2
+shootSound: 122mm_d25t
+smokeEffect: shootBigSmoke2
+ammoUseEffect: casing4
+ammoEjectBack: 2.0
+shake: 1
+//ammo is temporary
+ammoTypes: {
+    thorium: {
+	type: BasicBulletType
+	lifetime: 100
+	speed: 250
+	damage: 12500
+	splashDamage: 100
+	splashDamageRadius: 4
+	hitShake: 3
+	hitSound: largeExplosion
+	hitEffect: hitBulletBig
+	}
+    }
+drawer: {
+type: drawTurret
+    parts: [
+	{
+	type: RegionPart
+	suffix: -vent-left
+	layer: 35
+	moveX: -1.75
+	moveY: -3
+	moveRot: 0
+	progress: warmup
+	}
+	{
+	type: RegionPart
+	suffix: -vent-right
+	layer: 35
+	moveX: 1.75
+	moveY: -3
+	moveRot: 0
+	progress: warmup
+	}
+	{
+	type: RegionPart
+	suffix: -wing-left
+	layer: 34
+	moveX: -1.75
+	moveY: 0
+	moveRot: 0
+	progress: warmup
+	}
+	{
+	type: RegionPart
+	suffix: -wing-right
+	layer: 34
+	moveX: 1.75
+	moveY: 0
+	moveRot: 0
+	progress: warmup
+	}
+	{
+	type: RegionPart
+	suffix: -extension-left
+	layer: 33
+	moveX: -1.5
+	moveY: 5
+	moveRot: 0
+	progress: warmup
+	}
+	{
+	type: RegionPart
+	suffix: -extension-right
+	layer: 33
+	moveX: 1.5
+	moveY: 5
+	moveRot: 0
+	progress: warmup
+	}
+	{
+	type: RegionPart
+	suffix: -barrel-breech
+	layer: 35
+	moveX: 0
+	moveY: -20
+	moveRot: 0
+	progress: recoil
+	}
+	{
+	type: RegionPart
+	suffix: -middle
+	layer: 36
+	moveX: 0
+	moveY: -5
+	moveRot: 0
+	progress: reload
+	}
+	{
+	type: RegionPart
+	suffix: -main
+	layer: 35
+	moveX: 0
+	moveY: 0
+	moveRot: 0
+	}
+    ]
+}
+category: turret
+buildVisibility: sandboxOnly
+//buildvisibility is temporary until i dev the tech tree
